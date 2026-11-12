@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Bottle Compass</string>
+    <string name="title_activity_main">Bottle Compass</string>
+    <string name="package_name">com.firesignth.bottlecompass</string>
+    <string name="custom_url_scheme">com.firesignth.bottlecompass</string>
+</resources>
