@@ -27,3 +27,7 @@ npm run dev
 - TypeScript
 - React
 - Tailwind CSS
+
+## Project documentation
+
+See [docs/README.md](docs/README.md) for the project goals, current testing and platform baseline, and the proposed approach.
