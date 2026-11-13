@@ -15,10 +15,13 @@ Open your project in the [Lovable editor](https://lovable.dev) and keep building
 Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+git clone https://github.com/firesignth/bottle-compass
+cd bottle-compass
+pnpm i
+# Run the built in tests
+pnpm test
+# Run the service so that you can test manually
+pnpm dev
 ```
 
 ## Built with
