@@ -22,6 +22,27 @@
 - User wines, favorites, and tried-wine IDs are stored through separate `localStorage` helpers.
 - Capacitor is configured with `.output/public` as its web directory. The repository has an Android project; an iOS project has not yet been added.
 
+## iOS Setup
+
+The project already includes the `@capacitor/ios` dependency, but the native
+`ios/` project has not been generated. Creating and building it requires macOS
+with Xcode; Windows can be used for web and Android development but cannot run
+the iOS simulator or produce a native iOS build.
+
+On a Mac, from the repository root:
+
+1. Install Node.js, pnpm, and Xcode, then run `pnpm install`.
+2. Generate the native project once with `pnpm exec cap add ios`.
+3. After web changes, run `pnpm build` and `pnpm exec cap sync ios`.
+4. Open the project with `pnpm exec cap open ios`, then select a simulator or
+   device in Xcode. Physical-device and distribution builds require Apple code
+   signing setup.
+
 ## Guiding Principle
 
 Keep wine and cellar behavior independent of the platform. Define storage and native capabilities behind narrow interfaces so the same business rules can be tested once, with adapter-specific tests and a small set of end-to-end checks verifying each platform.
+
+## Documentation
+
+- [Initial user journey inventory](user-journeys.md) — current flows to map, test, and validate across platforms.
+- [Database lifecycle](database-lifecycle.md) — current behavior, intended update/reset rules, and open design decisions.
